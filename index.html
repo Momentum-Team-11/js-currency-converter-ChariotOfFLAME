@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="style" href="style.css">
+    <script src="currencies.js"></script>
+    <script src="main.js" defer></script>
+    <title>Adam's Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <div class="converter">
+        <div class="currencySelect">
+            <label for="firstCurrency">Convert from</label>
+            <select name="firstCurrency" id="currency1">
+                <!-- <option value="USD">USD</option> -->
+            </select>
+            <label for="secondCurrency">to</label>
+            <select name="secondCurrency" id="currency2">
+                <!-- <option value="EUR">EUR</option> -->
+            </select>
+        </div>
+        <div class="conversion">
+            <form>
+                <label for="amount">Amount:</label><br>
+                <input id="amount" type="number" size="3" maxlength="6">
+            </form>
+            <button id="convertButton">Convert!</button>
+        </div>
+    </div>
+    
+</body>
+</html>
