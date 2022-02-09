@@ -1,6 +1,7 @@
 let finalResults = document.getElementById("final")
 let finalCurrency = document.getElementById("theCurrency")
 let firstCurrency = document.getElementById("beginningCurrency")
+
 const currencyDiv1 = document.getElementById("currency1")
 for (let currency of currencies) {
     let currencyOption = document.createElement("option")
@@ -20,13 +21,12 @@ for (let currency of currencies) {
 const button = document.getElementById("convertButton")
 
 //after click on "convert", fetch currencies from api
-button.addEventListener('click', function(event) {
-    let refCurrencyURL = `http://api.exchangeratesapi.io/v1/latest?access_key=cd395f776fb21c696ae0905032870891`
-
-    fetch(refCurrencyURL)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data.success)
+let refCurrencyURL = `http://api.exchangeratesapi.io/v1/latest?access_key=cd395f776fb21c696ae0905032870891`
+fetch(refCurrencyURL)
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data.success)
+        button.addEventListener('click', function(event) {
             let amount = document.getElementById("amount").value
             let currency1Select = currencyDiv1.options[currencyDiv1.selectedIndex].value
             firstCurrency.innerText = currency1Select
