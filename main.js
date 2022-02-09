@@ -1,3 +1,6 @@
+let finalResults = document.getElementById("final")
+let finalCurrency = document.getElementById("theCurrency")
+let firstCurrency = document.getElementById("beginningCurrency")
 const currencyDiv1 = document.getElementById("currency1")
 for (let currency of currencies) {
     let currencyOption = document.createElement("option")
@@ -26,13 +29,12 @@ button.addEventListener('click', function(event) {
             console.log(data.success)
             let amount = document.getElementById("amount").value
             let currency1Select = currencyDiv1.options[currencyDiv1.selectedIndex].value
+            firstCurrency.innerText = currency1Select
             let currency2Select = currencyDiv2.options[currencyDiv2.selectedIndex].value
-            let currency1 = `data.rates.${currency1Select}`
-            console.log(currency1)
-            // let currency2 = `data.rates.${currency2Select}`
-            // console.log(currency2)
-            // let result = (amount * currency1) / currency2
-            // console.log(result)
+            let currency1 = data.rates[currency1Select]
+            let currency2 = data.rates[currency2Select]
+            let result = (amount * currency2) / currency1
+            finalResults.innerText = result.toFixed(2)
+            finalCurrency.innerText = currency2Select
         })
 })
-    

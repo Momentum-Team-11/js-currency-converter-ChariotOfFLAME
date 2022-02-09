@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body {
+    background-image: linear-gradient(rgb(193, 243, 255), rgb(255, 255, 255));
+    height: 100vh;
+}
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currencySelect {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.conversion {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+}
+
+label {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+input {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.currency1 {
+    margin-right: 10px;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    min-width: 100px;
+    height: 50px;
+    font-size: 40px;
+}
+
+.currencyClass {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
